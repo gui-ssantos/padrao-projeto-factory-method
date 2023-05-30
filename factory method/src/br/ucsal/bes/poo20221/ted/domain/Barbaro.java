@@ -18,15 +18,14 @@ public class Barbaro extends Personagem {
 	}
 	
 	// habilidades unicas de barbaro
-	// achei melhor colocar só 3 habilidades por classe de personagem, pra não ficar
-	// muita coisa desnecessária
+	// achei melhor colocar sï¿½ 3 habilidades por classe de personagem, pra nï¿½o ficar
+	// muita coisa desnecessï¿½ria
 	// minha ideia foi colocar boolean pra tipo, se o personagem tiver essa
 	// habilidade, coloca true
 	private boolean esquivaN; // esquiva natural
 	private boolean furia;
 	private boolean reducaoDano;
 	
-	private String PrincipalAtaque = "";
 
 	public boolean isEsquivaN() {
 		return esquivaN;
@@ -52,21 +51,14 @@ public class Barbaro extends Personagem {
 		this.reducaoDano = reducaoDano;
 	}
 
-	public String getPrincipalAtaque() {
-		return PrincipalAtaque;
-	}
-
-	public void setPrincipalAtaque(String PrincipalAtaque) {
-		this.PrincipalAtaque = PrincipalAtaque;
-	}
 	@Override
 	public String toString() {
 		String ficha;
 		ficha = "Nome do Jogador: " + this.getNomePlayer() + "\nNome do Personagem: " + this.getNomeChar() + "\nIdade do Personagem: "
-				+ this.getIdade() + "\nRaça: " + this.getRaca() + "\nPontos de vida: " + this.getPv() + "\nNível: "
-				+ this.getNivel() + "\nForça: " + this.getFrc() + "\nDestreza: " + this.getDes() + "\nConstituição: " + this.getCon() + "\n Inteligência: " + this.getItl()
+				+ this.getIdade() + "\nRaï¿½a: " + this.getRaca() + "\nPontos de vida: " + this.getPv() + "\nNï¿½vel: "
+				+ this.getNivel() + "\nForï¿½a: " + this.getFrc() + "\nDestreza: " + this.getDes() + "\nConstituiï¿½ï¿½o: " + this.getCon() + "\n Inteligï¿½ncia: " + this.getItl()
 				+ "\nSabedoria: " + this.getSab() + "\nCarisma: " + this.getCar() + "\nTem a skill Esquiva Natural? " + isEsquivaN()
-				+ "\nTem a skill Fúria?" + isFuria() + "\nTem a skill Redução de dano? " + isReducaoDano();
+				+ "\nTem a skill Fï¿½ria?" + isFuria() + "\nTem a skill Reduï¿½ï¿½o de dano? " + isReducaoDano();
 		return ficha;
 	}
 }

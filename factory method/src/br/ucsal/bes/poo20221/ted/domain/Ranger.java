@@ -21,8 +21,6 @@ public class Ranger extends Personagem {
 	private boolean rastroInvisivel;
 	private boolean camuflagem;
 
-	private String PrincipalAtaque = "Prepare-se para ataques de longa distância!";
-
 	// getters e setters
 	public boolean isRastreadorEficaz() {
 		return rastreadorEficaz;
@@ -48,21 +46,14 @@ public class Ranger extends Personagem {
 		this.camuflagem = camuflagem;
 	}
 
-	public String getPrincipalAtaque() {
-		return PrincipalAtaque;
-	}
-
-	public void setPrincipalAtaque(String PrincipalAtaque) {
-		this.PrincipalAtaque = PrincipalAtaque;
-	}
 	@Override
 	public String toString() {
 		String ficha;
 		ficha = "Nome do Jogador: " + this.getNomePlayer() + "\nNome do Personagem: " + this.getNomeChar() + "\nIdade do Personagem: "
-				+ this.getIdade() + "\nRaça: " + this.getRaca() + "\nPontos de vida: " + this.getPv() + "\nNível: "
-				+ this.getNivel() + "\nForça: " + this.getFrc() + "\nDestreza: " + this.getDes() + "\nConstituição: " + this.getCon() + "\n Inteligência: " + this.getItl()
+				+ this.getIdade() + "\nRaï¿½a: " + this.getRaca() + "\nPontos de vida: " + this.getPv() + "\nNï¿½vel: "
+				+ this.getNivel() + "\nForï¿½a: " + this.getFrc() + "\nDestreza: " + this.getDes() + "\nConstituiï¿½ï¿½o: " + this.getCon() + "\n Inteligï¿½ncia: " + this.getItl()
 				+ "\nSabedoria: " + this.getSab() + "\nCarisma: " + this.getCar() + "\nTem a skill Rastreador Eficaz? " + isRastreadorEficaz()
-				+ "\nTem a skill Rastro Invisível?" + isRastroInvisivel() + "\nTem a skill Camuflagem? " + isCamuflagem();
+				+ "\nTem a skill Rastro Invisï¿½vel?" + isRastroInvisivel() + "\nTem a skill Camuflagem? " + isCamuflagem();
 	return ficha;
 	}
 }

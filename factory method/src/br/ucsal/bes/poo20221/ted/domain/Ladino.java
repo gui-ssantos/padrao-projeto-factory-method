@@ -23,8 +23,6 @@ public class Ladino extends Personagem {
 	private boolean esquivaSN; // esquiva sobrenatural
 	private boolean furtiSuperior;
 
-	private String PrincipalAtaque;
-
 	// getters e setters
 	public boolean isAtaqueFurtivo() {
 		return ataqueFurtivo;
@@ -50,19 +48,12 @@ public class Ladino extends Personagem {
 		this.furtiSuperior = furtiSuperior;
 	}
 
-	public String getPrincipalAtaque() {
-		return PrincipalAtaque;
-	}
-
-	public void setPrincipalAtaque(String PrincipalAtaque) {
-		this.PrincipalAtaque = PrincipalAtaque;
-	}
 	@Override
 	public String toString() {
 		String ficha;
 		ficha = "Nome do Jogador: " + this.getNomePlayer() + "\nNome do Personagem: " + this.getNomeChar() + "\nIdade do Personagem: "
-				+ this.getIdade() + "\nRaça: " + this.getRaca() + "\nPontos de vida: " + this.getPv() + "\nNível: "
-				+ this.getNivel() + "\nForça: " + this.getFrc() + "\nDestreza: " + this.getDes() + "\nConstituição: " + this.getCon() + "\n Inteligência: " + this.getItl()
+				+ this.getIdade() + "\nRaï¿½a: " + this.getRaca() + "\nPontos de vida: " + this.getPv() + "\nNï¿½vel: "
+				+ this.getNivel() + "\nForï¿½a: " + this.getFrc() + "\nDestreza: " + this.getDes() + "\nConstituiï¿½ï¿½o: " + this.getCon() + "\n Inteligï¿½ncia: " + this.getItl()
 				+ "\nSabedoria: " + this.getSab() + "\nCarisma: " + this.getCar() + "\nTem a skill Ataque Furtivo? " + isAtaqueFurtivo()
 				+ "\nTem a skill Esquiva Sobrenatural?" + isEsquivaSN() + "\nTem a skill Furtividade Superior? " + isFurtiSuperior();
 	return ficha;
