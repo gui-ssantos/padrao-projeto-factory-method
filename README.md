@@ -1,2 +1,2 @@
-# padrao-projeto-prototype
-Padrão de Projeto Prototype aplicado em um projeto pré-existente.
+# padrao-projeto-factory-method
+Padrão de Projeto Factory Method aplicado em um projeto pré-existente.
