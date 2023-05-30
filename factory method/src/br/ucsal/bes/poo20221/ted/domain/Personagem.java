@@ -30,14 +30,12 @@ public abstract class Personagem {
 	private int nivel;
 	
 	//caracteristicas de habilidades basicas
-	private int frc; //força
+	private int frc; //forï¿½a
 	private int des; //destreza
 	private int con; //constituicao
 	private int itl; //inteligencia
 	private int sab; //sabedoria
 	private int car; //carisma
-	
-	public String PrincipalAtaque;
 
 	public String getNomeChar() {
 		return nomeChar;

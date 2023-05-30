@@ -18,8 +18,6 @@ public class Mago extends Personagem {
 		
 	}
 
-	private String PrincipalAtaque;
-
 	// habilidades unicas de mago
 	private boolean fireball;
 	private boolean persuasao;
@@ -49,23 +47,15 @@ public class Mago extends Personagem {
 	public void setCuraFeitico(boolean curaFeitico) {
 		this.curaFeitico = curaFeitico;
 	}
-
-	public String getPrincipalAtaque() {
-		return PrincipalAtaque;
-	}
-
-	public void setPrincipalAtaque(String PrincipalAtaque) {
-		this.PrincipalAtaque = PrincipalAtaque;
-	}
 	
 	@Override
 	public String toString() {
 		String ficha;
 		ficha = "Nome do Jogador: " + this.getNomePlayer() + "\nNome do Personagem: " + this.getNomeChar() + "\nIdade do Personagem: "
-				+ this.getIdade() + "\nRaça: " + this.getRaca() + "\nPontos de vida: " + this.getPv() + "\nNível: "
-				+ this.getNivel() + "\nForça: " + this.getFrc() + "\nDestreza: " + this.getDes() + "\nConstituição: " + this.getCon() + "\n Inteligência: " + this.getItl()
+				+ this.getIdade() + "\nRaï¿½a: " + this.getRaca() + "\nPontos de vida: " + this.getPv() + "\nNï¿½vel: "
+				+ this.getNivel() + "\nForï¿½a: " + this.getFrc() + "\nDestreza: " + this.getDes() + "\nConstituiï¿½ï¿½o: " + this.getCon() + "\n Inteligï¿½ncia: " + this.getItl()
 				+ "\nSabedoria: " + this.getSab() + "\nCarisma: " + this.getCar() + "\nTem a skill Bola de Fogo? " + isFireball()
-				+ "\nTem a skill Persuasão?" + isPersuasao() + "\nTem a skill Feitiço de Cura? " + isCuraFeitico();
+				+ "\nTem a skill Persuasï¿½o?" + isPersuasao() + "\nTem a skill Feitiï¿½o de Cura? " + isCuraFeitico();
 	return ficha;
 	}
 }
