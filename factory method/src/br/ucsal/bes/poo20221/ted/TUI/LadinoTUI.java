@@ -3,19 +3,22 @@ package br.ucsal.bes.poo20221.ted.TUI;
 import java.util.Scanner;
 import br.ucsal.bes.poo20221.ted.domain.Ladino;
 import br.ucsal.bes.poo20221.ted.exceptions.ValorIncorretoException;
+import br.ucsal.bes.poo20221.ted.factory.LadinoFactory;
 import br.ucsal.bes.poo20221.ted.business.PersonagemBO;
 
 public class LadinoTUI {
 
 	public static void criacaoPrincipal() {
+		LadinoFactory ladinoFactory = new LadinoFactory();
+
 		Scanner ent = new Scanner(System.in);
-		
+
 		print("Informe seu Nome");
 		String nomePlayer = ent.nextLine();
-		
+
 		print("Informe o nome do seu personagem:");
 		String nomeChar = ent.nextLine();
-		
+
 		print("Informe sua idade:");
 		int idade = ent.nextInt();
 		String raca = "";
@@ -24,43 +27,43 @@ public class LadinoTUI {
 		} catch (ValorIncorretoException e) {
 			print("Valor informado de forma incorreta, escolha uma op��o entre 1 e 4");
 		}
-		
+
 		print("Informe os pontos de vida do seu personagem:");
 		int pv = ent.nextInt();
-		
+
 		print("Informe o n�vel do seu personagem:");
 		int nivel = ent.nextInt();
-		
+
 		//leitor de atributos
 		print("Insira o n�mero da for�a do seu personagem: ");
 		int frc = ent.nextInt();
-		
+
 		print("Insira o n�mero da destreza do seu personagem: ");
 		int des = ent.nextInt();
-		
+
 		print("Insira o n�mero da constitui��o do seu personagem: ");
 		int con = ent.nextInt();
-		
+
 		print("Insira o n�mero da intelig�ncia do seu personagem: ");
 		int itl = ent.nextInt();
-		
+
 		print("Insira o n�mero da sabedoria do seu personagem: ");
 		int sab = ent.nextInt();
-		
+
 		print("Insira o n�mero da carisma do seu personagem: ");
 		int car = ent.nextInt();
-		
+
 		boolean ataqueFurtivo = temAtaqueFurtivo();
 		boolean esquivaSN = temEsquivaSN();
 		boolean furtiSuperior = temFurtiSuperior();
-		
-		Ladino ladino = new Ladino(nomeChar, nomePlayer, idade, raca, pv, nivel,
-				frc, des, con, itl, sab, car,
-				ataqueFurtivo, esquivaSN, furtiSuperior);
-		
-		PersonagemBO.cadastrarLadino(ladino);
-	
-		
+
+		//FACTORY METHOD:
+		//Criação de personagem através da factory correspondente:
+		PersonagemBO.cadastrarLadino(ladinoFactory.criarPersonagem(nomeChar, nomePlayer, idade, raca, pv, nivel,
+																	frc, des, con, itl, sab, car,
+																	ataqueFurtivo, esquivaSN, furtiSuperior));
+
+
 	}
 
 	private static boolean temAtaqueFurtivo() {
