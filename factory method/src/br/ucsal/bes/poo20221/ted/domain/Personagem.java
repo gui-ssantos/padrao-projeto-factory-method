@@ -36,6 +36,7 @@ public abstract class Personagem {
 	private int itl; //inteligencia
 	private int sab; //sabedoria
 	private int car; //carisma
+	
 
 	public String getNomeChar() {
 		return nomeChar;

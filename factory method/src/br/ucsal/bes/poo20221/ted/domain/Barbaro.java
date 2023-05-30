@@ -61,4 +61,5 @@ public class Barbaro extends Personagem {
 				+ "\nTem a skill F�ria?" + isFuria() + "\nTem a skill Redu��o de dano? " + isReducaoDano();
 		return ficha;
 	}
+
 }

@@ -3,11 +3,14 @@ package br.ucsal.bes.poo20221.ted.TUI;
 import java.util.Scanner;
 import br.ucsal.bes.poo20221.ted.domain.Barbaro;
 import br.ucsal.bes.poo20221.ted.exceptions.ValorIncorretoException;
+import br.ucsal.bes.poo20221.ted.factory.BarbaroFactory;
 import br.ucsal.bes.poo20221.ted.business.PersonagemBO;
 
 public class BarbaroTUI {
 
 	public static void criacaoPrincipal() {
+		
+		BarbaroFactory barbaroFactory = new BarbaroFactory();
 		
 		Scanner ent = new Scanner(System.in);
 
@@ -55,13 +58,13 @@ public class BarbaroTUI {
 		boolean esquivaN = temEsquivaN();
 		boolean furia = temFuria();
 		boolean reducaoDano = temReducaoDeDano();
-
-		Barbaro barbaro = new Barbaro(nomeChar, nomePlayer, idade, raca, pv, nivel, frc, des, con, itl, sab, car,
-				esquivaN, furia, reducaoDano);
 		
-		PersonagemBO.cadastrarBarbaro(barbaro);
+		//FACTORY METHOD:
+		//Criação de personagem através da factory correspondente:
+		PersonagemBO.cadastrarBarbaro(barbaroFactory.criarPersonagem(nomeChar, nomePlayer, idade,
+																	raca, pv, nivel, frc, des, con, itl, sab, car,
+																	esquivaN, furia, reducaoDano));
 
-		
 	}
 
 	private static boolean temEsquivaN() {

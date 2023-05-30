@@ -3,12 +3,15 @@ package br.ucsal.bes.poo20221.ted.TUI;
 import java.util.Scanner;
 import br.ucsal.bes.poo20221.ted.domain.Ranger;
 import br.ucsal.bes.poo20221.ted.exceptions.ValorIncorretoException;
+import br.ucsal.bes.poo20221.ted.factory.RangerFactory;
 import br.ucsal.bes.poo20221.ted.domain.Personagem;
 import br.ucsal.bes.poo20221.ted.business.PersonagemBO;
 
 public class RangerTUI {
 
 	public static void criacaoPrincipal() {
+		RangerFactory rangerFactory = new RangerFactory();
+		
 		Scanner ent = new Scanner(System.in);
 
 		print("Informe seu Nome");
@@ -56,10 +59,11 @@ public class RangerTUI {
 		boolean rastroInvisivel = temRastroInvisivel();
 		boolean camuflagem = temCamuflagem();
 
-		Ranger ranger = new Ranger(nomeChar, nomePlayer, idade, raca, pv, nivel, frc, des, con, itl, sab, car,
-				rastreadorEficaz, rastroInvisivel, camuflagem);
-		
-		PersonagemBO.cadastrarRanger(ranger);
+		//FACTORY METHOD:
+		//Criação de personagem através da factory correspondente:
+		PersonagemBO.cadastrarRanger(rangerFactory.criarPersonagem(nomeChar, nomePlayer, idade, raca, pv, nivel,
+																		frc, des, con, itl, sab, car,
+																		rastreadorEficaz, rastroInvisivel, camuflagem));
 
 	}
 

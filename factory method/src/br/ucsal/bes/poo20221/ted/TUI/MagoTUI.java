@@ -4,11 +4,14 @@ import java.util.Scanner;
 import br.ucsal.bes.poo20221.ted.domain.Mago;
 import br.ucsal.bes.poo20221.ted.domain.Personagem;
 import br.ucsal.bes.poo20221.ted.exceptions.ValorIncorretoException;
+import br.ucsal.bes.poo20221.ted.factory.MagoFactory;
 import br.ucsal.bes.poo20221.ted.business.PersonagemBO;
 
 public class MagoTUI {
 
 	public static void criacaoPrincipal() {
+		MagoFactory magoFactory = new MagoFactory();
+		
 		Scanner ent = new Scanner(System.in);
 
 		print("Informe seu Nome");
@@ -56,10 +59,11 @@ public class MagoTUI {
 		boolean persuasao = temPersuasao();
 		boolean curaFeitico = temCuraFeitico();
 
-		Mago mago = new Mago(nomeChar, nomePlayer, idade, raca, pv, nivel, frc, des, con, itl, sab, car, fireball,
-				persuasao, curaFeitico);
-		
-		PersonagemBO.cadastrarMago(mago);
+		//FACTORY METHOD:
+		//Criação de personagem através da factory correspondente:
+		PersonagemBO.cadastrarMago(magoFactory.criarPersonagem(nomeChar, nomePlayer, idade, raca, pv, nivel,
+																frc, des, con, itl, sab, car,
+																fireball, persuasao, curaFeitico));
 
 	}
 
